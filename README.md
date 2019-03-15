@@ -62,11 +62,11 @@ DF natural language processing system
 `Basic          //其他实体，默认初始为basic`  
 
 
-### 依赖软件
+## 依赖软件
 * g++ (version >= 4.1 is recommended ) or clang++(Apple LLVM version 9.0.0);
 * cmake (version >= 2.8 is recommended );
 
-### 下载和编译
+## 下载和编译
 
 1.下载crfpp软件包，放到工程主目录下
 2.安装crf++，
@@ -78,12 +78,12 @@ DF natural language processing system
 4.cmake ..
 5.make
 
-### 使用方法
+## 使用方法
 *make后生成dfnlp二进制程序，运行 :
 
 ./dfnlp
 
-### 结果示例
+## 结果示例
 * input = “吴学研，男，1983年9月23日出生，汉族，无职业，住哈尔滨市松北区。”
 * output:
 
@@ -114,10 +114,10 @@ word : 。    pos : w    begin_pos : 34    key_type : Basic
 
 
 
-### 分词性能评测
+## 分词性能评测
 根据第二届国际汉语分词测评（The Second International Chinese Word Segmentation Bakeoff)发布的国际中文分词测评标准，将DFNLP分别与国内常见的分词软件分别在pku_test(510KB), msr_test(560KB)数据集上进行测试。使用icwb2-data 提供的perl脚本计算分词结果的召回率和准确率，其中ICTCLAS，THULAC_lite，LTP-3.2.0的结果数据使用的是清华THULAC提供的结果数据和运行时间，我仅测试了jieba（c++）和DFNLP的性能和时间，然后以jieba为基准，将DFNLP的运行时间换算为新的时间，例如：例如THULAC页面测试的jieba时间为0.4s，而我测试时jieba和DFNLP分别为0.2s，0.3时，那么如果jieba为0.4s时，DFNLP将换算为0.6s（不严谨的列了一下），准确率、召回率方面结果应该是相同的，测试结果如下：
 
-### pku_test(510KB)
+## pku_test(510KB)
 
 |  Algorithm  |  Precision   |   Recall   |  F-Measure  |    Time     |
 |-------------| :----------: | :--------: | :---------: | :---------: |
@@ -129,7 +129,7 @@ word : 。    pos : w    begin_pos : 34    key_type : Basic
 
 
 
-### msr_test(560KB)
+## msr_test(560KB)
 
 |  Algorithm  |  Precision   |   Recall   |  F-Measure  |    Time     |
 |-------------| :----------: | :--------: | :---------: | :---------: |
@@ -138,7 +138,6 @@ word : 。    pos : w    begin_pos : 34    key_type : Basic
 | THULAC_lite |	   0.877	 |	 0.899    |	   0.888	|    0.62s    |
 |  LTP-3.2.0  |	   0.867	 |   0.896    |	   0.881    |	 3.21s    |
 |    DFNLP    |    0.833	 |   0.857    |	   0.845	|    0.63s    |
-
 
 
 
